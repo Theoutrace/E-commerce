@@ -1,0 +1,14 @@
+.heading{
+    height: 50px;
+    background-color: grey;
+    margin-top: 0px;
+    padding: 0px;
+}
+
+.heading-text{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.products{
+    margin-top: 100px;
+}
