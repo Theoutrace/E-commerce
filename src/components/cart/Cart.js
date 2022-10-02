@@ -43,7 +43,7 @@ const Cart = (props) => {
       <div className={cls["cart"]}>
         <div className={cls["cart-text"]}>
           <div >Cart</div>
-          <button onClick={props.onClose}>X</button>
+          <button onClick={props.onClose} className={cls['close-cart-btn']}>X</button>
         </div>
 
         {cartElements.map((item) => {
@@ -63,7 +63,7 @@ const Cart = (props) => {
                 <span>${item.price}</span>
               </div>
               <span className={cls["price"]}>{item.quantity}</span>
-              <button>Remove</button>
+              <button >Remove</button>
             </div>
           );
         })}

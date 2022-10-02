@@ -8,6 +8,11 @@
     display: flex;
     justify-content: space-between;
 }
+.close-cart-btn{
+    background-color: rgba(0, 0, 0, 0.137);
+    border-radius: 3px;
+    border: 0px;
+}
 
 .cart-single-item{
     display: flex;

@@ -7,7 +7,7 @@ const Header = (props) => {
     <div className={cls["header"]}>
       <NavBar />
       <div className={cls['cart-btn-container']}>
-        <button onClick={props.onShowCart}>cart</button>
+        <button onClick={props.onShowCart} className={cls['cart-btn']}>🛒 Cart </button>
       </div>
     </div>
   );

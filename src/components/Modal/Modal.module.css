@@ -19,7 +19,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 30;
     animation: slide-down 300ms ease-out forwards;
-    overflow-y: scroll;
+    overflow:scroll;
     scroll-behavior: smooth;
     height: 400px;
   }
@@ -27,7 +27,7 @@
   @media (min-width: 768px) {
     .modal {
       width: 20rem;
-      left: calc(70% - 30px);
+      left: calc(75% - 25px);
     }
   }
   

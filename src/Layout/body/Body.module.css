@@ -3,6 +3,8 @@
     margin-top: 0px;
     padding: 0px;
     background-image: url('../../../src/assets/images/pixelsImageEcommerce.jpg');
+    /* background-color: rgb(44, 44, 44); */
+    background-size:cover;
     color: white;
     display: flex;
     justify-content: center;

@@ -25,7 +25,7 @@ const Body = () => {
                 ></img>
                 <div className={cls["price-to-cartbtn-container"]}>
                   <a4 className={cls["price-text"]}>${item.price}</a4>
-                  <button>Add to Cart</button>
+                  <button>🛒 Add to Cart</button>
                 </div>
               </div>
             </div>
