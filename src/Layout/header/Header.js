@@ -1,15 +1,16 @@
-import React from 'react'
-import Cart from '../../components/cart/Cart'
-import NavBar from './navbar/NavBar'
-import cls from './Header.module.css'
+import React from "react";
+import NavBar from "./navbar/NavBar";
+import cls from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className={cls['header']}>
-      <NavBar/>
-      <Cart/>
+    <div className={cls["header"]}>
+      <NavBar />
+      <div className={cls['cart-btn-container']}>
+        <button onClick={props.onShowCart}>cart</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
