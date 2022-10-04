@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# E-commerce model website using React
 
 Stage 2: Cart items -> add to cart enabled 
 concept used: useContext, useState with callbacks for realtime changes.
