@@ -1,5 +1,27 @@
 # Getting Started with Create React App
 
+Stage 2: Cart items -> add to cart enabled 
+concept used: useContext, useState with callbacks for realtime changes.
+
+![stageCartAdd](https://user-images.githubusercontent.com/103827746/193937092-1e54faab-0db1-45c5-8346-272f7b457146.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
