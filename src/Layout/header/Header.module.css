@@ -3,11 +3,13 @@
     justify-content: center;
     margin-bottom: 0px;
     width: 100%;
+    color: white;
 }
 .cart-btn-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .cart-btn{
@@ -22,6 +24,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(65, 65, 65);
+    margin-right: 5px;
 }
 .cart-btn:hover{
     color: rgb(0, 0, 0);

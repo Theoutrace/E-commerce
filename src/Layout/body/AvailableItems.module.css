@@ -1,0 +1,29 @@
+
+
+.single-products{
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.single-products-image-cart-price{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid rgba(155, 155, 155, 0.11);
+    margin: 5px;
+}
+
+.product-image{
+    border-radius: 10px;
+}
+
+.price-to-cartbtn-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0px 15px 0px 15px;
+}
