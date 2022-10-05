@@ -1,15 +1,13 @@
 import React from "react";
-import About from "./menu/About";
-import Home from "./menu/Home";
-import Store from "./menu/Store";
 import cls from "./NavBar.module.css";
+import { NavLink } from "react-router-dom";
+
 
 const NavBar = () => {
   return (
     <div className={cls["navbar-design"]}>
-      <Home />
-      <Store />
-      <About />
+      <NavLink activeClassName={cls['activeLink']} className={cls['link']}  to="/store">store</NavLink>
+      <NavLink activeClassName={cls['activeLink']} className={cls['link']} to="/about">about</NavLink>
     </div>
   );
 };

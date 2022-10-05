@@ -1,10 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
 import Cart from "./components/cart/Cart";
-import Body from "./Layout/body/Body";
-import Footer from "./Layout/footer/Footer";
 import Header from "./Layout/header/Header";
 import CartProvider from "./store/CartProvider";
+import Body from "./Layout/body/Body";
 
 function App() {
   const [cartIsShow, setCartIsShow] = useState(false);
@@ -23,10 +22,7 @@ function App() {
           {cartIsShow && <Cart onClose={hideCartHandler} />}
           <Header onShowCart={showCartHandler} />
         </header>
-        <Body />
-        <footer className="footer-container">
-          <Footer />
-        </footer>
+        <Body/>
       </CartProvider>
     </div>
   );
