@@ -26,6 +26,13 @@ const NavBar = () => {
       >
         about
       </NavLink>
+      <NavLink
+        activeClassName={cls["activeLink"]}
+        className={cls["link"]}
+        to="/contact_us"
+      >
+        contact Us
+      </NavLink>
     </div>
   );
 };

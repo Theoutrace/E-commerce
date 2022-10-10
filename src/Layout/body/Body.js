@@ -6,6 +6,7 @@ import About from "../../components/pages/About";
 import AvailableItems from "./AvailableItems";
 import Footer from "../footer/Footer";
 import cls from "./Body.module.css";
+import ContactUs from "../../components/pages/ContactUs";
 
 const Body = () => {
   return (
@@ -19,6 +20,9 @@ const Body = () => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contact_us">
+          <ContactUs/>
         </Route>
         <Route path="/store">
           <div className={cls["products-container"]}>
