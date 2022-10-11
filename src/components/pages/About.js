@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 const About = () => {
   return (
     <Fragment>
-      <a2>About</a2>
+      <h2>About</h2>
       <p>
         Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of
         sorrows, hates no prosecutors will unfold in the enduring of which were

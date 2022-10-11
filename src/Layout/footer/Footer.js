@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <div className={cls['footer']}>
-        <a2>The Generics</a2>
+        <h2>The Generics</h2>
         <div>
           socials
         </div>

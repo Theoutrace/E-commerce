@@ -10,7 +10,7 @@ const ContactUsForm = () => {
       email: e.target[1].value,
       phone: e.target[2].value,
     };
-    console.log(contactDataObj);
+    // console.log(contactDataObj);
     const response = await fetch("https://e-commerce-contact-us-default-rtdb.firebaseio.com/contact-us.json", {
         method: 'POST',
         body: JSON.stringify(contactDataObj),
@@ -20,6 +20,9 @@ const ContactUsForm = () => {
     })
     const formData = await response.json()
     console.log(formData);
+    e.target[0].value = ''
+    e.target[1].value = ''
+    e.target[2].value = ''
   };
 
   return (
