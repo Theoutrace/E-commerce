@@ -14,7 +14,11 @@ const AvailableItems = (props) => {
     <div>
       <div className={cls["single-products-image-cart-price"]}>
         <span>{props.item.title}</span>
-        <Link to={`/store/${props.item.id}`} state={{from:'occupation'}}>
+        {/* <Link to={`/store/${props.item.id}`} > */}
+        <Link to={{
+          pathname: `/store/${props.item.id}`,
+          state: {stateParam: props.item}
+        }} >
           <img
             className={cls["product-image"]}
             src={props.item.imageUrl}
