@@ -1,0 +1,71 @@
+.button-and-play{
+    background-color: rgb(94, 94, 94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+}
+.latest-album-btn{
+    background-color: rgba(137, 43, 226, 0);
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgb(28, 185, 178);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.play-btn{
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(137, 43, 226, 0);
+    border: 1px solid rgb(28, 185, 178);
+}
+
+.tour-pannel-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tour-text{
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.item-container{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.internal-div{
+    width: 20%;
+    text-align: left;
+    justify-content: left;
+}
+
+.internal-div-venue{
+ width: 35%;
+ text-align: left;
+ justify-content: left;
+}
+.buy-ticket-btn{
+    background-color: cadetblue;
+    border: 0px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+hr{
+    width: 60%;
+}

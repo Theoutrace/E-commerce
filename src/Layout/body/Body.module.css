@@ -1,0 +1,40 @@
+.heading{
+    height: 250px;
+    margin-top: 0px;
+    padding: 0px;
+    background-image: url('../../../src/assets/images/pixelsImageEcommerce.jpg');
+    background-size:cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.heading-text{
+    margin: 0;
+    font-size: 72px;
+}
+
+.products{
+    margin-top: 20px;
+    margin-bottom: 70px;
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    height: 350px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    padding: 5px;
+    background-color: white;
+    
+}
+
+.products-container{
+    background-color: rgb(102, 102, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
