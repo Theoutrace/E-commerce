@@ -35,8 +35,8 @@ const ProductDetails = () => {
                 },
 
                 enlargedImageContainerDimensions: {
-                  width: "250%",
-                  height: "150%",
+                  width: "270%",
+                  height: "170%",
                 },
 
                 shouldUsePositiveSpaceLens: true,
