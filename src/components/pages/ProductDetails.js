@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProductDetails.css";
 import { useParams, useLocation } from "react-router-dom";
+import ReactImageMagnify from "react-image-magnify";
 
 const ProductDetails = () => {
   const param = useParams();
@@ -19,7 +20,28 @@ const ProductDetails = () => {
           })}
         </div>
         <div className="main-Image-product">
-          <img src={location.stateParam.imageUrl} alt=""></img>
+          <ReactImageMagnify
+            {...{
+              smallImage: {
+                isFluidWidth: true,
+                src: `${location.stateParam.imageUrl}`,
+              },
+
+              largeImage: {
+                src: `${location.stateParam.imageUrl}`,
+                width: 1200,
+                height: 1000
+              },
+
+              enlargedImageContainerDimensions: {
+                width: '250%',
+                height: '150%'
+              },
+
+              shouldUsePositiveSpaceLens: true
+            }}
+          ></ReactImageMagnify>
+          {/* <img src={location.stateParam.imageUrl} alt=""></img> */}
         </div>
       </div>
       <div className="product-deatails-container">
