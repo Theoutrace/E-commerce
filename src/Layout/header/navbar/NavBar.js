@@ -26,6 +26,16 @@ const NavBar = () => {
       >
         about
       </NavLink>
+
+      <NavLink
+        activeClassName={cls["activeLink"]}
+        className={cls["link"]}
+        to="/login"
+      >
+        Login
+      </NavLink>
+
+
       <NavLink
         activeClassName={cls["activeLink"]}
         className={cls["link"]}

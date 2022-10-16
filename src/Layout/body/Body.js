@@ -8,10 +8,9 @@ import Footer from "../footer/Footer";
 import cls from "./Body.module.css";
 import ContactUs from "../../components/pages/ContactUs";
 import ProductDetails from "../../components/pages/ProductDetails";
+import Login from "../../components/pages/Login/Login";
 
 const Body = () => {
-
-
   return (
     <div>
       <div className={cls["heading"]}>
@@ -25,11 +24,14 @@ const Body = () => {
           <Route path="/about">
             <About />
           </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/contact_us">
             <ContactUs />
           </Route>
           <Route path="/store/:productId">
-            <ProductDetails/>
+            <ProductDetails />
           </Route>
           <Route exact path="/store">
             <div className={cls["products-container"]}>
@@ -37,7 +39,7 @@ const Body = () => {
                 {productsArr.map((item) => {
                   return (
                     <div className={cls["single-products"]}>
-                      <AvailableItems key={item.id} item={item}/>
+                      <AvailableItems key={item.id} item={item} />
                     </div>
                   );
                 })}
