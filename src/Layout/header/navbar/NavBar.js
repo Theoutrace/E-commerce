@@ -8,7 +8,7 @@ const NavBar = () => {
       <NavLink 
         activeClassName={cls["activeLink"]}
         className={cls["link"]}
-        to="/"
+        to="/" exact
       >
         Home
       </NavLink>
