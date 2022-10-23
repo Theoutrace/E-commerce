@@ -10,9 +10,7 @@ const CartIconCounter = () => {
     setCount(()=>cartCtx.items.length)
   },[cartCtx.items.length])
   
- 
 
-  
 
   return (
     <div>

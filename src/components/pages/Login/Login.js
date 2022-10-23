@@ -29,8 +29,8 @@ const Login = () => {
 
       if(res.ok){
         return res.json().then(data =>{
-          console.log(data.idToken);
-          authCtx.login(data.idToken)
+          // console.log(data.idToken);
+          authCtx.login(data.idToken,enteredEmail.current.value)
           history.replace('/store')
 
         })

@@ -9,6 +9,7 @@ const AvailableItems = (props) => {
   const itemAddToCartHandler = () => {
     // console.log(props.item);
     cartCtx.addItem(props.item);
+   
   };
   return (
     <div>

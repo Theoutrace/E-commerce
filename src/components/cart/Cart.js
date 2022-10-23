@@ -1,11 +1,23 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect} from "react";
 import cartContext from "../../store/cart-context";
 import Modal from "../Modal/Modal";
 import cls from "./Cart.module.css";
+import CartItem from "./CartItem";
+import icon from '../../../src/assets/images/icons8-shopping-cart.gif'
 
 const Cart = (props) => {
   const cartCtx =useContext(cartContext)
+  console.log(cartCtx.items);
+  const [cartItems, setCartItems] = useState("");
   
+
+  useEffect(() => {
+    console.log('running useEffect cart');
+    console.log(cartCtx);
+    setCartItems(()=>cartCtx.items)
+
+  }, [cartCtx.items])
+
 
   return (
     <Modal>
@@ -17,28 +29,16 @@ const Cart = (props) => {
           </button>
         </div>
 
-        {cartCtx.items.map((item) => {
-          
-          return (
-            <div className={cls["cart-single-item"]}>
-              <div className={cls["image-title"]}>
-                <div className={cls["image"]}>
-                  <img
-                    className={cls["item-image"]}
-                    src={item.item.imageUrl}
-                    alt={item.item.title}
-                  />
-                </div>
-                <span className={cls["title"]}>{item.item.title}</span>
-              </div>
-              <div className={cls["price"]}>
-                <span>${item.item.price}</span>
-              </div>
-              <span className={cls["price"]}>{item.item.quantity}</span>
-              <button>Remove</button>
-            </div>
-          );
-        })}
+        <div>
+          {!cartItems && <div className={cls["cart-icon-container"]}><img src={icon} alt='cart loading...' width='50' height='50'></img><p>Loading...</p></div>}
+          {cartItems &&
+            cartItems.map((itm) => {
+              return <>
+              <CartItem key={itm.productId} itm={itm}/>
+
+              </>
+            })}
+        </div>
       </div>
     </Modal>
   );
