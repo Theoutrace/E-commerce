@@ -1,34 +1,26 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import cartContext from "../../store/cart-context";
 import cls from "./Cart.module.css";
 
 const CartItem = (props) => {
   const cartCtx = useContext(cartContext);
-  const [qty, setQty] = useState(props.itm.item.quantity);
-  console.log(cartCtx.items);
   console.log(props.itm);
+  const [qty, setQty] = useState(props.itm.quantity);
 
-  const idx = cartCtx.items.findIndex(
-    (itm) => itm.item.title === props.itm.item.title
-  );
+  
 
-  console.log(cartCtx.items[idx].item.quantity);
-
-  console.log("items ran");
-
-  const itemDetails = props.itm.item;
+  const itemDetails = props.itm;
+  console.log(itemDetails);
 
   const addItemFromCarthandler = () => {
     const itmeObj = {
       imageUrl: itemDetails.imageUrl,
       title: itemDetails.title,
       price: itemDetails.price,
-      quantity: itemDetails.quantity,
-      _id: itemDetails._id,
       productId: itemDetails.productId,
     };
     cartCtx.addItem(itmeObj);
-    setQty(() => cartCtx.items[idx].item.quantity);
+    // setQty(() => cartCtx.items[idx].item.quantity);
   };
 
   return (

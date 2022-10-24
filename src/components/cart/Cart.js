@@ -4,17 +4,32 @@ import Modal from "../Modal/Modal";
 import cls from "./Cart.module.css";
 import CartItem from "./CartItem";
 import icon from '../../../src/assets/images/icons8-shopping-cart.gif'
+import AuthContext from "../../store/auth/auth-context";
 
 const Cart = (props) => {
+  const authCtx = useContext(AuthContext)
+  // console.log(authCtx.email);
   const cartCtx =useContext(cartContext)
-  console.log(cartCtx.items);
-  const [cartItems, setCartItems] = useState("");
+  console.log(cartCtx);
+  const [itm, setItm] = useState("");
+  
+  console.log('here',props.cartItems);
+  const plainEmail = authCtx.email.replace(/[^a-zA-Z0-9]/g,"")
+  console.log(plainEmail);
   
 
   useEffect(() => {
-    console.log('running useEffect cart');
-    console.log(cartCtx);
-    setCartItems(()=>cartCtx.items)
+
+      fetch(`https://crudcrud.com/api/e4078c1d3fec46709c4822ae5a61f28d/${plainEmail}`,
+      {
+        method: 'GET',
+        headers:{'Content-Type': 'application/json'}
+      }
+      ).then((res)=>res.json().then(data=>{
+        console.log('this was sent', data)
+        setItm(()=> data)
+    
+      }))
 
   }, [cartCtx.items])
 
@@ -30,11 +45,12 @@ const Cart = (props) => {
         </div>
 
         <div>
-          {!cartItems && <div className={cls["cart-icon-container"]}><img src={icon} alt='cart loading...' width='50' height='50'></img><p>Loading...</p></div>}
-          {cartItems &&
-            cartItems.map((itm) => {
+          {!itm && <div className={cls["cart-icon-container"]}><img src={icon} alt='cart loading...' width='50' height='50'></img><p>Loading...</p></div>}
+          {itm &&
+            itm.map((itm) => {
+              console.log(itm);
               return <>
-              <CartItem key={itm.productId} itm={itm}/>
+              <CartItem key={itm._id} itm={itm}/>
 
               </>
             })}

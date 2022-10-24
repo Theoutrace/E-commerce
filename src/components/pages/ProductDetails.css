@@ -9,11 +9,11 @@
     /* background-color: rgb(255, 255, 255); */
     padding: 20px;
     /* border: 3px solid rgba(73, 73, 73, 0.253); */
-    border-radius: 20px;
+    border-radius: 10px;
     width: 60%;
     display: flex;
     justify-content: space-between;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(55, 54, 54, 0.193) 0px 5px 15px;
 }
 
 .all-Images-container{
@@ -37,6 +37,7 @@
 
 .main-Image-product{
     display: flex;
+    border-radius: 5px;
     /* background-color: rgb(52, 53, 52); */
 }
 
@@ -78,7 +79,7 @@
     background-color: blueviolet;
     width: 100%;
     margin: 5px;
-    width: 200px;
+    width: 100px;
     height: 35px;
     border-radius: 5px;
     border: 0px;
@@ -91,19 +92,14 @@
     background-color: gold;
     font-size: 18px;
     color: rgb(18, 80, 196);
+    font-weight: 600;
     padding: 5px;
 }
 
-.reviews-container{
-    /* background-color: blueviolet; */
+.buyNow-btn:hover{
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(18, 80, 196);
 }
 
-.single-reviews-container{
-    display: flex;
-    margin: 10px;
-}
-.single-reviewsimage{
-    margin-right: 15px;
-    background-color: antiquewhite;
-    border-radius: 50%;
-}
+
+
