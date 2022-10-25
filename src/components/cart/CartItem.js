@@ -20,7 +20,7 @@ const CartItem = (props) => {
       productId: itemDetails.productId,
     };
     cartCtx.addItem(itmeObj);
-    // setQty(() => cartCtx.items[idx].item.quantity);
+    setQty(() => props.itm.quantity+1);
   };
 
   return (

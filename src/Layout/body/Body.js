@@ -14,7 +14,7 @@ import AuthContext from "../../store/auth/auth-context";
 const Body = () => {
   const authCtx = useContext(AuthContext);
 
-  console.log(productsArr);
+
 
   return (
     <div>

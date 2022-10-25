@@ -15,12 +15,10 @@ export const AuthContextProvider = (props) => {
 
   const userIsLoggedIn = !!token;
 
- 
-
     useEffect(()=>{
 
       console.log('auth context ran ');
-      console.log(contextValue);
+      console.log(authContextValue);
       
       if(token){
 
@@ -33,12 +31,15 @@ export const AuthContextProvider = (props) => {
           headers: {"Content-Type": "application/json"}
         }
         ).then(res=>res.json().then(data=>{
-          // console.log(data);
-          setEmailId(()=>data.users[0].email)}))
-
+          console.log(data);
+          if(data.error && data.error.message === 'INVALID_ID_TOKEN'){
+            localStorage.removeItem('token')
+          }else{
+            setEmailId(()=>data.users[0].email)
+          }
+          
+        }))
       }
-
-
 
     },[token])
    
@@ -55,7 +56,7 @@ export const AuthContextProvider = (props) => {
     setToken(null);
   };
 
-  const contextValue = {
+  const authContextValue = {
     token: token,
     isLoggedIn: userIsLoggedIn,
     login: logInHandler,
@@ -64,7 +65,7 @@ export const AuthContextProvider = (props) => {
   };
 
   return (
-    <AuthContext.Provider value={contextValue}>
+    <AuthContext.Provider value={authContextValue}>
       {props.children}
     </AuthContext.Provider>
   );

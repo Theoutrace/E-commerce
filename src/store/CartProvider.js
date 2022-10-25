@@ -7,6 +7,19 @@ const CartProvider = (props) => {
   const authCtx = useContext(AuthContext);
   const plainEmail = authCtx.email.replace(/[^a-zA-Z0-9 ]/g, "");
 
+  useEffect(()=>{
+
+    fetch(`https://crudcrud.com/api/8701daad413f471fbb63120ab55485c3/cart${plainEmail}`,
+    {
+      method: 'GET',
+      headers: {'Content-Type': 'application/json'}
+    }
+    ).then((res=>res.json().then(data=>{
+      console.log(data);
+      setCartItems(()=> data)
+    })))
+  },[cartItems.length])
+
 
 
   const addItemToCartHandler = (item) => {
@@ -16,7 +29,7 @@ const CartProvider = (props) => {
     //if present then collect the id of that item and update (increase the qty) post.
 
     //fetching the cart item 
-    fetch(`https://crudcrud.com/api/e4078c1d3fec46709c4822ae5a61f28d/${plainEmail}`,
+    fetch(`https://crudcrud.com/api/8701daad413f471fbb63120ab55485c3/cart${plainEmail}`,
     {
       method: 'GET',
       headers: {'Content-Type':'application/json'}
@@ -32,20 +45,25 @@ const CartProvider = (props) => {
 
         item = {...item, quantity: 1}
 
-        fetch(`https://crudcrud.com/api/e4078c1d3fec46709c4822ae5a61f28d/${plainEmail}`,
+        fetch(`https://crudcrud.com/api/8701daad413f471fbb63120ab55485c3/cart${plainEmail}`,
         {
           method: 'POST',
           body: JSON.stringify(item),
           headers: {'Content-Type': 'application/json'}
         }
-        ).then((res)=>res.json().then(data=>console.log('sent item: ',data)))
+        ).then((res)=>res.json().then(data=>
+         
+          setCartItems(previous=> [...previous, data])
+
+          ))
+        
 
       }else{
 
         console.log( 'this item id is duplicate',data[idx]._id);
         console.log('duplicate item details',data[idx]);
 
-        // constructing item bec put method doesnt take id in the object
+        // constructing item because put method doesnt take id in the object
         item={
           imageUrl: data[idx].imageUrl,
           price: data[idx].price,
@@ -56,13 +74,16 @@ const CartProvider = (props) => {
 
         // item = {...item, quantity: data[idx].quantity+1}
         console.log('increased or not', item);
-        fetch(`https://crudcrud.com/api/e4078c1d3fec46709c4822ae5a61f28d/${plainEmail}/${data[idx]._id}`,
+        fetch(`https://crudcrud.com/api/8701daad413f471fbb63120ab55485c3/cart${plainEmail}/${data[idx]._id}`,
         {
           method: 'PUT',
           body: JSON.stringify(item),
           headers: {'Content-Type': 'application/json'}
         }
-        ).then((res)=>res.json().then(data=>console.log('sent item with increased quantity: ',data)))
+        ).then((res)=>res.json().then(data=>
+          // console.log('sent item with increased quantity: ',data)
+          setCartItems((previous)=>[...previous,data])
+          ))
       }
     }))
     

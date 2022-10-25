@@ -11,16 +11,17 @@ const Cart = (props) => {
   // console.log(authCtx.email);
   const cartCtx =useContext(cartContext)
   console.log(cartCtx);
+
   const [itm, setItm] = useState("");
   
-  console.log('here',props.cartItems);
+  
   const plainEmail = authCtx.email.replace(/[^a-zA-Z0-9]/g,"")
   console.log(plainEmail);
   
 
   useEffect(() => {
 
-      fetch(`https://crudcrud.com/api/e4078c1d3fec46709c4822ae5a61f28d/${plainEmail}`,
+      fetch(`https://crudcrud.com/api/8701daad413f471fbb63120ab55485c3/cart${plainEmail}`,
       {
         method: 'GET',
         headers:{'Content-Type': 'application/json'}
