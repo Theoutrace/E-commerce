@@ -1,10 +1,12 @@
 import React, { Fragment } from "react";
+import './About.css'
 
 const About = () => {
   return (
     <Fragment>
       <h2>About</h2>
-      <p>
+      <div className="about-paragraph-div">
+      <p >
         Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of
         sorrows, hates no prosecutors will unfold in the enduring of which were
         born in it? Often leads smallest mistake some pain main responsibilities
@@ -26,6 +28,9 @@ const About = () => {
         take the hardships of the life of harsh condemn, we are accusing him?
         Him whom something large cisterns.
       </p>
+
+      </div>
+
     </Fragment>
   );
 };

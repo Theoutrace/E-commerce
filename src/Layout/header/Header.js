@@ -3,6 +3,7 @@ import NavBar from "./navbar/NavBar";
 import cls from "./Header.module.css";
 import CartIconCounter from "../../components/cart/CartIconCounter";
 
+
 const Header = (props) => {
 
 

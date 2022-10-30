@@ -21,7 +21,7 @@ const Cart = (props) => {
 
   useEffect(() => {
 
-      fetch(`https://crudcrud.com/api/8701daad413f471fbb63120ab55485c3/cart${plainEmail}`,
+      fetch(`https://crudcrud.com/api/dab6ef0ab3ac4c1f9b77badece8b8287/cart${plainEmail}`,
       {
         method: 'GET',
         headers:{'Content-Type': 'application/json'}
@@ -56,6 +56,7 @@ const Cart = (props) => {
               </>
             })}
         </div>
+        <div className={cls["cart-order-container"]}><button className={cls["cart-order-btn"]}>Order</button></div>
       </div>
     </Modal>
   );

@@ -1,17 +1,15 @@
 import React from "react";
-import cls from './Footer.module.css'
+import cls from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <div>
-      <div className={cls['footer']}>
+      <div className={cls["footer"]}>
         <h2>The Generics</h2>
-        <div>
-          socials
-        </div>
+        <div>Socials</div>
       </div>
     </div>
   );
 };
 
-export default Footer
+export default Footer;
